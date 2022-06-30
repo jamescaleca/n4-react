@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Raleway&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    line-height: 1.2;
+    color: #818181;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* NAV */
+
+header {
+    background-color: #0f4c97;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    padding-bottom: 30px;
+}
+.logo {
+    margin-right: 16.5em;
+    padding-top: .5em;
+}
+.logo-sm {
+    height: 77px;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(whitesmoke, .75);
+    border-radius: 5px;
+}
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+.nav-toggle-label span::after {
+    top: 7px;
+}
+nav {
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    left: 0;
+    background: #0f4c97;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav ul li a:hover {
+    color: #000;
+}
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* MAIN */
+h1 {
+    font-family: "Orbitron", sans-serif;
+}
+main {
+    display: block;
+}
+.main-banner {
+    background: #011162 url('./assets/header-image-bg.jpg');
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+.main-banner h1 {
+    color: #fff;
+    font-size: 36px;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #002252;
+    display: flex;
+}
+.footer-cont ul {
+    display: flex;
+    list-style-type: none;
+}

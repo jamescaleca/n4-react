@@ -1,6 +1,7 @@
-import React from 'react';
-import Logo from '../assets/Logo/Black/N4-Enterprises-Black.png'
-import '../styles.css'
+import React from "react";
+import { Link } from "react-router-dom"
+import Logo from "../assets/Logo/Black/N4-Enterprises-Black.png"
+import "../styles.css"
 
 export default function Navbar() {
     return (
@@ -14,19 +15,19 @@ export default function Navbar() {
             <nav>
                 <ul className="active">
                     <li>
-                        <a href="#top">HOME</a>
+                        <Link to="/">HOME</Link>
                     </li>
                     <li>
-                        <a href="">ABOUT</a>
+                        <Link to="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <a href="">SERVICES</a>
+                        <Link to="/services">SERVICES</Link>
                     </li>
                     <li>
-                        <a href="">INSIGHTS</a>
+                        <Link to="/insights">INSIGHTS</Link>
                     </li>
                     <li>
-                        <a href="">CONTACT</a>
+                        <Link to="/contact">CONTACT</Link>
                     </li>
                     <li>
                         <button>BOOK NOW</button>

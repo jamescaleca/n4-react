@@ -38,7 +38,7 @@ button {
 header {
     display: flex;
     background-color: transparent;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: relative;
@@ -48,7 +48,7 @@ header {
     margin-top: 20px;
 }
 .logo {
-    margin-right: 16.5em;
+    margin-left: 1em;
     padding-top: .5em;
 }
 .logo-sm {
@@ -164,7 +164,7 @@ main {
 .main-banner p {
     background: #0f63d8bc;
     padding: 14px 20px;
-    border-radius: 18px;
+    border-top-left-radius: 18px;
 }
 
 
